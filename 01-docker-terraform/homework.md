@@ -1,4 +1,4 @@
-## Module 1 Homework
+## Module 1 Homework solution
 
 ## Docker & SQL
 
@@ -24,7 +24,7 @@ Which tag has the following text? - *Automatically remove the container when it 
 - `--rc`
 - `--rmc`
 - `--rm`
-
+## answer is --rm tells Docker to automatically remove the container when it exits. your_image_name is the name of the image you’re running
 
 ## Question 2. Understanding docker first run 
 

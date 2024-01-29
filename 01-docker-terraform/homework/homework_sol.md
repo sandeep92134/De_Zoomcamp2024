@@ -24,7 +24,8 @@ Which tag has the following text? - *Automatically remove the container when it 
 - `--rc`
 - `--rmc`
 - `--rm`
-## answer is --rm tells Docker to automatically remove the container when it exits. your_image_name is the name of the image you’re running
+## solution
+--rm tells Docker to automatically remove the container when it exits. your_image_name is the name of the image you’re running
 
 ## Question 2. Understanding docker first run 
 
@@ -38,6 +39,18 @@ What is version of the package *wheel* ?
 - 23.0.1
 - 58.1.0
 
+## Solution
+pip show wheel
+Name: wheel
+Version: 0.42.0
+Summary: A built-package format for Python
+Home-page: 
+Author: 
+Author-email: Daniel Holth <dholth@fastmail.fm>
+License: 
+Location: /usr/local/python/3.9.18/lib/python3.9/site-packages
+Requires: 
+Required-by:
 
 # Prepare Postgres
 
@@ -66,6 +79,9 @@ Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in 
 - 15859
 - 89009
 
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/01-docker-terraform/homework/Q3.png)
+
 ## Question 4. Largest trip for each day
 
 Which was the pick up day with the largest trip distance
@@ -76,6 +92,8 @@ Use the pick up time for your calculations.
 - 2019-09-26
 - 2019-09-21
 
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/01-docker-terraform/homework/Q4.png)
 
 ## Question 5. Three biggest pick up Boroughs
 
@@ -88,6 +106,8 @@ Which were the 3 pick up Boroughs that had a sum of total_amount superior to 500
 - "Bronx" "Manhattan" "Queens" 
 - "Brooklyn" "Queens" "Staten Island"
 
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/01-docker-terraform/homework/Q5.png)
 
 ## Question 6. Largest tip
 
@@ -101,7 +121,8 @@ Note: it's not a typo, it's `tip` , not `trip`
 - JFK Airport
 - Long Island City/Queens Plaza
 
-
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/01-docker-terraform/homework/Q6.png)
 
 ## Terraform
 
@@ -121,7 +142,76 @@ After updating the main.tf and variable.tf files run:
 ```
 terraform apply
 ```
+## Solution
+```
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
 
+Terraform will perform the following actions:
+
+  # google_bigquery_dataset.demo_dataset will be created
+  + resource "google_bigquery_dataset" "demo_dataset" {
+      + creation_time              = (known after apply)
+      + dataset_id                 = "demo_dataset"
+      + default_collation          = (known after apply)
+      + delete_contents_on_destroy = false
+      + effective_labels           = (known after apply)
+      + etag                       = (known after apply)
+      + id                         = (known after apply)
+      + is_case_insensitive        = (known after apply)
+      + last_modified_time         = (known after apply)
+      + location                   = "US"
+      + max_time_travel_hours      = (known after apply)
+      + project                    = "terraform-pract"
+      + self_link                  = (known after apply)
+      + storage_billing_model      = (known after apply)
+      + terraform_labels           = (known after apply)
+    }
+
+  # google_storage_bucket.demo-bucket will be created
+  + resource "google_storage_bucket" "demo-bucket" {
+      + effective_labels            = (known after apply)
+      + force_destroy               = true
+      + id                          = (known after apply)
+      + location                    = "US"
+      + name                        = "terraform-demo-gcs-bucket"
+      + project                     = (known after apply)
+      + public_access_prevention    = (known after apply)
+      + self_link                   = (known after apply)
+      + storage_class               = "STANDARD"
+      + terraform_labels            = (known after apply)
+      + uniform_bucket_level_access = (known after apply)
+      + url                         = (known after apply)
+
+      + lifecycle_rule {
+          + action {
+              + type = "AbortIncompleteMultipartUpload"
+            }
+          + condition {
+              + age                   = 1
+              + matches_prefix        = []
+              + matches_storage_class = []
+              + matches_suffix        = []
+              + with_state            = (known after apply)
+            }
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+google_bigquery_dataset.demo_dataset: Creating...
+google_storage_bucket.demo-bucket: Creating...
+google_bigquery_dataset.demo_dataset: Creation complete after 2s [id=projects/terraform-pract/datasets/demo_dataset]
+google_storage_bucket.demo-bucket: Creation complete after 2s [id=terraform-demo-gcs-bucket]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
 Paste the output of this command into the homework submission form.
 
 

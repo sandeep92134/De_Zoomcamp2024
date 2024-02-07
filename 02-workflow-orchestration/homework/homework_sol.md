@@ -179,6 +179,8 @@ Once the dataset is loaded, what's the shape of the data?
 * 544,898 rows x 20 columns
 * 133,744 rows x 20 columns
 
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/02-workflow-orchestration/homework/w1.png)
 ## Question 2. Data Transformation
 
 Upon filtering the dataset where the passenger count is greater than 0 _and_ the trip distance is greater than zero, how many rows are left?
@@ -187,7 +189,9 @@ Upon filtering the dataset where the passenger count is greater than 0 _and_ the
 * 266,855 rows
 * 139,370 rows
 * 266,856 rows
-
+* 
+## Solution
+![alt text](https://github.com/sandeep92134/De_Zoomcamp2024/blob/main/02-workflow-orchestration/homework/w1.1.png)
 ## Question 3. Data Transformation
 
 Which of the following creates a new column `lpep_pickup_date` by converting `lpep_pickup_datetime` to a date?

@@ -1,6 +1,6 @@
 variable "credentials" {
   description = "My Credentials"
-  default     = "/workspaces/De_Zoomcamp2024/01-docker-terraform/1_terraform_gcp/terraform/keys/my-creds.json"
+  default     = "<your json file location>"
   #ex: if you have a directory where this file is called keys with your service account json file
   #saved there as my-creds.json you could use default = "./keys/my-creds.json"
 }
@@ -8,7 +8,7 @@ variable "credentials" {
 
 variable "project" {
   description = "Project"
-  default     = "terraform-pract-412618"
+  default     = "terraform-pract"
 }
 
 variable "region" {

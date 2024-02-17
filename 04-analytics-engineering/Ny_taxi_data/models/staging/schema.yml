@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: terraform-pract-412618
+    schema: Ny_Col_taxi
+
+    tables:
+      - name: green_tripdata
+      - name: yellow_tripdata

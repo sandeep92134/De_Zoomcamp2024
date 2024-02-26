@@ -27,7 +27,7 @@ Create a core model similar to fact trips, but selecting from stg_fhv_tripdata a
 Similar to what we've done in fact_trips, keep only records with known pickup and dropoff locations entries for pickup and dropoff locations. 
 Run the dbt model without limits (is_test_run: false).
 
-![alt text]()
+![alt text](<week4hw.png>)
 
 - 12998722
 - -> 22998722
@@ -40,7 +40,7 @@ Run the dbt model without limits (is_test_run: false).
 
 Create a dashboard with some tiles that you find interesting to explore the data. One tile should show the amount of trips per month, as done in the videos for fact_trips, including the fact_fhv_trips data.
 
-![alt text]()
+![alt text](<hw_question4.png>)
 
 - FHV
 - Green

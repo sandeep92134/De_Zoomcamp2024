@@ -1,0 +1,17 @@
+FROM bitnami/spark:3.3.4
+
+ENV PYTHONPATH="${SPARK_HOME}/python/lib/py4j-0.10.9.5-src.zip:$PYTHONPATH"  
+ENV PATH="${HOME}/.local/bin/:$PATH"
+
+USER root
+RUN apt-get update 
+RUN apt-get install wget -qqq
+
+# Install Jupyter notebook
+# RUN pip install --no-cache-dir jupyter
+
+# Switch back to non-root user
+USER 1001
+
+# COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt

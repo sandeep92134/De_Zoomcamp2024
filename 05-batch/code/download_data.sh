@@ -1,4 +1,3 @@
-
 set -e
 
 TAXI_TYPE=$1 # "yellow"

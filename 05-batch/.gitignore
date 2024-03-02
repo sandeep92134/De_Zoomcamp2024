@@ -1,0 +1,6 @@
+code/data
+code/fhvhv
+code/zones
+code/spark-warehouse
+*.csv
+code/.ipynb_checkpoints
